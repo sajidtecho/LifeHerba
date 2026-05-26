@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'modules/splash/splash_screen.dart';
 
 void main() {
   runApp(const FHTApp());
@@ -21,7 +22,7 @@ class FHTApp extends StatelessWidget {
         useMaterial3: true,
         fontFamily: 'Roboto',
       ),
-      home: const HomeScreen(),
+      home: const SplashScreen(),
     );
   }
 }
