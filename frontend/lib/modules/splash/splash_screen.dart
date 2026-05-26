@@ -98,8 +98,6 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
 
   @override
   Widget build(BuildContext context) {
-    final Size screenSize = MediaQuery.of(context).size;
-    
     return Scaffold(
       backgroundColor: const Color(0xFFF6FBEF), // Serene light-green/off-white background
       body: Stack(
