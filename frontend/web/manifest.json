@@ -1,11 +1,11 @@
 {
-    "name": "fht_app",
-    "short_name": "fht_app",
+    "name": "LifeHerba",
+    "short_name": "LifeHerba",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "LifeHerba - Holistic Wellness Application.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'modules/splash/splash_screen.dart';
 
 void main() {
-  runApp(const FHTApp());
+  runApp(const LifeHerbaApp());
 }
 
-class FHTApp extends StatelessWidget {
-  const FHTApp({super.key});
+class LifeHerbaApp extends StatelessWidget {
+  const LifeHerbaApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'FHT App',
+      title: 'LifeHerba',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: const Color(0xFFF8FAFC),
       appBar: AppBar(
         title: const Text(
-          'FHT Application',
+          'LifeHerba',
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,
@@ -73,7 +73,7 @@ class HomeScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Welcome to FHT App',
+                      'Welcome to LifeHerba',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 22,
@@ -82,7 +82,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     SizedBox(height: 8),
                     Text(
-                      'A modular and secure healthcare platform.',
+                      'Your gateway to holistic wellness.',
                       style: TextStyle(
                         color: Color(0xFF94A3B8),
                         fontSize: 14,

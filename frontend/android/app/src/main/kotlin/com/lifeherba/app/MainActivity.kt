@@ -1,4 +1,4 @@
-package com.example.fht_app
+package com.lifeherba.app
 
 import io.flutter.embedding.android.FlutterActivity
 
