@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../theme/app_theme.dart';
+import '../patient/patient_profile_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -83,7 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           children: [
             // 1. Curved Gradient Header & Search Bar
-            _buildHeader(),
+            if (_currentTabIndex != 4) _buildHeader(),
 
             // 2. Main content pages
             Expanded(
@@ -341,8 +342,9 @@ class _HomeScreenState extends State<HomeScreen> {
         return _buildPlaceholderTab(
             'Exclusive Deals & Offers', Icons.local_offer_rounded);
       case 4:
-        return _buildPlaceholderTab(
-            'Personal Profile Dashboard', Icons.person_rounded);
+        return PatientProfileScreen(
+          onMedsOrdered: _addToCart,
+        );
       default:
         return _buildHomeTab();
     }
