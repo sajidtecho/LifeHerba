@@ -17,7 +17,7 @@ class PatientProfileScreen extends StatefulWidget {
 class _PatientProfileScreenState extends State<PatientProfileScreen> {
   // Personal Details States
   String _patientName = "Sajid Ahmad";
-  String _patientId = "#HC-98231";
+  final String _patientId = "#HC-98231";
   String _patientAge = "23 Years";
   String _patientGender = "Male";
   String _patientBloodGroup = "B+ Positive";
@@ -355,7 +355,7 @@ class _PatientProfileScreenState extends State<PatientProfileScreen> {
                     const SizedBox(height: 16),
                     Row(
                       children: [
-                        Icon(Icons.shopping_bag_outlined, color: AppColors.primary, size: 28),
+                        const Icon(Icons.shopping_bag_outlined, color: AppColors.primary, size: 28),
                         const SizedBox(width: 10),
                         Text(
                           'Prescription Order Checkout',
@@ -580,10 +580,11 @@ class _PatientProfileScreenState extends State<PatientProfileScreen> {
     showDialog(
       context: context,
       barrierDismissible: false,
-      builder: (context) {
+      builder: (dialogContext) {
         // Trigger simulated callback to update parent home cart
         Future.delayed(const Duration(milliseconds: 1400), () {
-          Navigator.pop(context);
+          if (!dialogContext.mounted) return;
+          Navigator.pop(dialogContext);
           if (widget.onMedsOrdered != null) {
             widget.onMedsOrdered!();
           }
@@ -711,12 +712,13 @@ class _PatientProfileScreenState extends State<PatientProfileScreen> {
     showDialog(
       context: context,
       barrierDismissible: false,
-      builder: (context) {
+      builder: (dialogContext) {
         // Mock loading upload
         Future.delayed(const Duration(milliseconds: 1200), () {
-          Navigator.pop(context);
+          if (!dialogContext.mounted) return;
+          Navigator.pop(dialogContext);
           setState(() {
-            final double sizeMB = 1.0 + (5.0 - 1.0) * (3.14159 % 0.8);
+            const double sizeMB = 2.4;
             _reports.add({
               'id': _reports.length + 1,
               'name': '${templateName.replaceAll(' ', '_')}.pdf',
@@ -725,6 +727,7 @@ class _PatientProfileScreenState extends State<PatientProfileScreen> {
               'type': 'pdf',
             });
           });
+          if (!mounted) return;
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               content: Text('Report "$templateName" uploaded securely!'),
@@ -875,6 +878,7 @@ class _PatientProfileScreenState extends State<PatientProfileScreen> {
     );
 
     Future.delayed(const Duration(milliseconds: 1200), () {
+      if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Row(
