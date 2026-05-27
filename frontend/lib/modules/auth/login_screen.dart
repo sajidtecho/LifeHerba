@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../theme/app_theme.dart';
-import '../../main.dart'; // To navigate to HomeScreen after successful login
+import '../home/home_screen.dart';
 import 'signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -13,7 +13,7 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   final _formKey = GlobalKey<FormState>();
-  
+
   // Controllers
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
@@ -107,7 +107,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 width: double.infinity,
                 constraints: const BoxConstraints(maxWidth: 500),
                 decoration: BoxDecoration(
-                  color: AppColors.mintGreenContainer, // CSS bg-[#f0fdf4] mapping
+                  color:
+                      AppColors.mintGreenContainer, // CSS bg-[#f0fdf4] mapping
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(color: AppColors.outlineVariant, width: 1),
                   boxShadow: [
@@ -132,7 +133,10 @@ class _LoginScreenState extends State<LoginScreen> {
                       // Form title
                       Text(
                         'Welcome Back',
-                        style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                        style: Theme.of(context)
+                            .textTheme
+                            .headlineMedium
+                            ?.copyWith(
                               fontWeight: FontWeight.w700,
                               color: AppColors.onSurface,
                             ),
@@ -153,7 +157,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         controller: _emailController,
                         keyboardType: TextInputType.emailAddress,
                         validator: _validateEmail,
-                        autofillHints: const [AutofillHints.username, AutofillHints.email],
+                        autofillHints: const [
+                          AutofillHints.username,
+                          AutofillHints.email
+                        ],
                         textInputAction: TextInputAction.next,
                         decoration: const InputDecoration(
                           hintText: 'sajid@example.com',
@@ -174,13 +181,15 @@ class _LoginScreenState extends State<LoginScreen> {
                             onTap: () {
                               ScaffoldMessenger.of(context).showSnackBar(
                                 const SnackBar(
-                                  content: Text('Password reset flow not configured yet.'),
+                                  content: Text(
+                                      'Password reset flow not configured yet.'),
                                   duration: Duration(seconds: 2),
                                 ),
                               );
                             },
                             child: Padding(
-                              padding: const EdgeInsets.only(bottom: 6, right: 2),
+                              padding:
+                                  const EdgeInsets.only(bottom: 6, right: 2),
                               child: Text(
                                 'Forgot Password?',
                                 style: GoogleFonts.inter(
@@ -245,8 +254,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                   width: 20,
                                   child: CircularProgressIndicator(
                                     strokeWidth: 2.5,
-                                    valueColor:
-                                        AlwaysStoppedAnimation<Color>(Colors.white),
+                                    valueColor: AlwaysStoppedAnimation<Color>(
+                                        Colors.white),
                                   ),
                                 )
                               : Row(
@@ -286,7 +295,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               },
                               child: RichText(
                                 text: TextSpan(
-                                  text: "New to HerbalCare? ",
+                                  text: "New to LifeHerba? ",
                                   style: GoogleFonts.inter(
                                     fontSize: 14,
                                     color: AppColors.onSurfaceVariant,
