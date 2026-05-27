@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'modules/splash/splash_screen.dart';
+import 'theme/app_theme.dart';
 
 void main() {
   runApp(const LifeHerbaApp());
@@ -13,15 +14,7 @@ class LifeHerbaApp extends StatelessWidget {
     return MaterialApp(
       title: 'LifeHerba',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF0F172A),
-          primary: const Color(0xFF0F172A),
-          secondary: const Color(0xFF3B82F6),
-        ),
-        useMaterial3: true,
-        fontFamily: 'Roboto',
-      ),
+      theme: AppTheme.lightTheme,
       home: const SplashScreen(),
     );
   }
