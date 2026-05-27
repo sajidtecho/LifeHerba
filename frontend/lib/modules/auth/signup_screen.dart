@@ -158,9 +158,10 @@ class _SignupScreenState extends State<SignupScreen> {
                         ]
                       : null,
                 ),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
+                child: IntrinsicHeight(
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
                     // LEFT COLUMN: Forms Core
                     Expanded(
                       flex: 6,
@@ -595,7 +596,8 @@ class _SignupScreenState extends State<SignupScreen> {
                           ),
                         ),
                       ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),

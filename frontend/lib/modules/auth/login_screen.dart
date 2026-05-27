@@ -122,9 +122,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         ]
                       : null,
                 ),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
+                child: IntrinsicHeight(
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
                     // LEFT COLUMN: Login Form Form container
                     Expanded(
                       flex: 6,
@@ -466,7 +467,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                         ),
                       ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
