@@ -1705,7 +1705,7 @@ class _PatientProfileScreenState extends State<PatientProfileScreen> {
               maxCrossAxisExtent: 400,
               mainAxisSpacing: 10,
               crossAxisSpacing: 10,
-              childAspectRatio: 4.0,
+              childAspectRatio: 3.4,
             ),
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
@@ -1745,21 +1745,33 @@ class _PatientProfileScreenState extends State<PatientProfileScreen> {
                               fontSize: 10,
                               color: AppColors.outline,
                             ),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
                           ),
                         ],
                       ),
                     ),
+                    const SizedBox(width: 8),
                     Row(
+                      mainAxisSize: MainAxisSize.min,
                       children: [
                         IconButton(
+                          padding: const EdgeInsets.all(4),
+                          constraints: const BoxConstraints(),
                           icon: const Icon(Icons.visibility_outlined, size: 18, color: AppColors.primary),
                           onPressed: () => _openReportPreview(rep),
                         ),
+                        const SizedBox(width: 4),
                         IconButton(
+                          padding: const EdgeInsets.all(4),
+                          constraints: const BoxConstraints(),
                           icon: const Icon(Icons.download_outlined, size: 18, color: AppColors.primary),
                           onPressed: () => _simulateDownload(rep['name'] as String),
                         ),
+                        const SizedBox(width: 4),
                         IconButton(
+                          padding: const EdgeInsets.all(4),
+                          constraints: const BoxConstraints(),
                           icon: const Icon(Icons.delete_outline_rounded, size: 18, color: AppColors.error),
                           onPressed: () {
                             setState(() => _reports.removeWhere((r) => r['id'] == rep['id']));
