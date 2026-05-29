@@ -1,0 +1,3 @@
+D:/LIfeHerba/pub_cache/hosted/pub.dev/jni-1.0.0/android/.cxx/Debug/724n5n2v/x86/CMakeFiles/jni.dir
+D:/LIfeHerba/pub_cache/hosted/pub.dev/jni-1.0.0/android/.cxx/Debug/724n5n2v/x86/CMakeFiles/edit_cache.dir
+D:/LIfeHerba/pub_cache/hosted/pub.dev/jni-1.0.0/android/.cxx/Debug/724n5n2v/x86/CMakeFiles/rebuild_cache.dir

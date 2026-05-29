@@ -1,0 +1,5 @@
+# ninja log v5
+26	688	8016612361318633	CMakeFiles/jni.dir/include/dart_api_dl.c.o	cf09880bc262e1a3
+54	970	8016612363897176	CMakeFiles/jni.dir/dartjni.c.o	e14acb8082a2b270
+2	1937	8016612373740102	CMakeFiles/jni.dir/third_party/global_jni_env.c.o	3b33bc1a54d76aa4
+1937	2441	8016612378120550	D:/LIfeHerba/frontend/build/jni/intermediates/cxx/Debug/724n5n2v/obj/x86/libdartjni.so	bfe6f76e399da51c
